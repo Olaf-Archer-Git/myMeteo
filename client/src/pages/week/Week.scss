@@ -1,1 +1,69 @@
 @import "../../constants/styles.scss";
+
+.week {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  background-color: #f6efef;
+}
+
+.accordion {
+  max-width: 60rem;
+  width: 100%;
+  border-radius: 0.4rem;
+
+  &__item {
+    background: $green;
+    margin: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: $green;
+    border: 0.1rem solid $red;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    transform: rotate(180deg);
+  }
+
+  &__answer {
+    color: $white;
+    max-height: 0;
+    transition: ease-in-out 0.3s;
+    overflow: hidden;
+  }
+
+  &__subtitle {
+    padding-top: 0.2rem;
+    text-transform: lowercase;
+  }
+
+  &__subtitle span {
+    font-family: "Cookie", cursive;
+    font-size: 1.4rem;
+    padding: 0 0.3rem;
+  }
+}
+
+.show {
+  max-height: 99rem;
+  height: auto;
+}
+
+.collapsed {
+  transform: rotate(360deg);
+}

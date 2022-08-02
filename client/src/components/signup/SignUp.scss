@@ -1,1 +1,103 @@
 @import "../../constants/styles.scss";
+
+.signUp {
+  background: #38b590b4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 78vh;
+  width: 100%;
+  position: fixed;
+  top: 11vh;
+  left: 0;
+  z-index: 1;
+
+  &__wrap {
+    max-width: 50rem;
+    height: 100%;
+    max-height: 25rem;
+    width: 100%;
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+  }
+
+  &__container {
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+    background: $red;
+    position: relative;
+  }
+
+  &__button {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+
+  &__content {
+    min-width: 50%;
+    color: $green;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__title span {
+    color: $red;
+  }
+
+  &__input {
+    width: 100%;
+    min-width: 12rem;
+    color: $green;
+    font-size: 0.9rem;
+    border: 0.15rem solid $red;
+    padding: 0.7rem;
+    height: 2.5rem;
+    border-radius: $border;
+    outline: none;
+    margin: 0.5rem;
+  }
+
+  &__input::placeholder {
+    color: $red;
+    font-weight: bold;
+  }
+
+  &__btn {
+    border: 0.15rem solid $green;
+    padding: 0.5rem;
+    max-width: 50%;
+    margin: 1rem auto;
+    border-radius: $border;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  &__btn:hover {
+    color: $white;
+    border-color: $red;
+    background: $red;
+  }
+
+  &__text {
+    font-size: 0.9rem;
+  }
+
+  &__text a {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: $red;
+  }
+}

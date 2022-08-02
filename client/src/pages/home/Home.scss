@@ -1,1 +1,91 @@
 @import "../../constants/styles.scss";
+
+.home {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 80vh;
+
+  &__container {
+    width: 35%;
+    min-width: 18rem;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    width: 100%;
+    color: $red;
+    font-size: 1.1rem;
+    border: 0.2rem solid $red;
+    border-right: none;
+    padding: 0.5rem;
+    height: 2.5rem;
+    border-radius: $border 0 0 $border;
+    outline: none;
+  }
+
+  &__input::placeholder {
+    color: $green;
+  }
+
+  &__btn {
+    width: 4rem;
+    height: 2.5rem;
+    border: 0.2rem solid $red;
+    background: $red;
+    text-align: center;
+    border-radius: 0 $border $border 0;
+    cursor: pointer;
+  }
+
+  &__icon:hover {
+    transform: scale(1.15);
+    transition: all 0.3s;
+  }
+}
+
+.home {
+  &__content {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.05rem;
+  }
+
+  &__title {
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    text-transform: capitalize;
+    font-size: 2em;
+  }
+
+  &__item {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    text-transform: lowercase;
+  }
+
+  &__item span {
+    margin: 0 0.2rem 0 1rem;
+    font-family: "Cookie", cursive;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .home__search {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
