@@ -1,1 +1,151 @@
 @import "../../constants/styles.scss";
+
+.header {
+  @include box-measure;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2.5rem;
+  }
+
+  &__logo img {
+    max-width: 6.5rem;
+    width: 100%;
+    height: auto;
+  }
+
+  &__link {
+    color: $red;
+    transition: all 0.4s;
+    padding-bottom: 0.2rem;
+    position: relative;
+  }
+
+  &__link:hover {
+    color: $green;
+  }
+
+  &__link::after {
+    @include link-style;
+  }
+
+  &__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom;
+  }
+
+  &__link-auth {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &__btn {
+    padding: 0.15rem 0.7rem;
+    border: 0.15rem solid $red;
+    border-radius: $border;
+    color: $red;
+    transition: all 0.5s;
+    margin-left: 0.7rem;
+    cursor: pointer;
+  }
+
+  &__btn:first-child {
+    border: 0.15rem solid $green;
+    color: $green;
+  }
+
+  &__btn:hover {
+    background: $green;
+    color: $white;
+    border: 0.15rem solid $green;
+  }
+
+  &__btn:first-child:hover {
+    background: $red;
+    border: 0.15rem solid $red;
+    color: $white;
+  }
+
+  &__switcher div {
+    width: 2rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: $green;
+  }
+  &__switcher {
+    cursor: pointer;
+    display: none;
+  }
+}
+
+.header__link.active {
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .header__switcher {
+    display: block;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    width: 50%;
+    height: 80vh;
+    flex-direction: column;
+    background: $red;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+    z-index: 100;
+  }
+
+  .header__logo img {
+    max-width: 5.5rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .header__link {
+    color: $white;
+  }
+
+  .header__btn {
+    color: $white;
+    border: 0.15rem solid $white;
+    display: flex;
+    margin-bottom: 1rem;
+    background: $red;
+  }
+
+  .header__btn:first-child {
+    color: $white;
+    border: 0.15rem solid $white;
+  }
+
+  .header__btn:hover,
+  .header__btn:first-child:hover {
+    background: $white;
+    color: $green;
+    border: 0.15rem solid $green;
+  }
+
+  .header__active {
+    transform: translateX(0%);
+  }
+
+  .header__icon .line1 {
+    transform: rotate(-45deg) translate(-8px, 10px);
+  }
+
+  .header__icon .line2 {
+    opacity: 0;
+  }
+
+  .header__icon .line3 {
+    transform: rotate(45deg) translate(-4px, -5px);
+  }
+}

@@ -2,3 +2,30 @@
 $white: #ffffff;
 $red: #d45a5a;
 $green: #38b590;
+
+//border
+$border: 0.2rem;
+
+//mixin
+@mixin link-style {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.1rem;
+  bottom: 0;
+  left: 0;
+  background-color: $green;
+  transform-origin: bottom;
+  transition: transform 0.25s ease-out;
+}
+
+@mixin box-measure {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 11vh;
+  border-top: 2vh solid $red;
+  border-bottom: 2vh solid $red;
+  background-color: $white;
+}

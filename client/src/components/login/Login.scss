@@ -1,1 +1,104 @@
 @import "../../constants/styles.scss";
+
+.login {
+  background: #d45a5a56;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 78vh;
+  width: 100%;
+  position: fixed;
+  top: 11vh;
+  right: 0;
+  z-index: 1;
+
+  &__wrap {
+    max-width: 50rem;
+    height: 100%;
+    max-height: 25rem;
+    width: 100%;
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+  }
+
+  &__content {
+    color: $red;
+    min-width: 50%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__title span {
+    color: $green;
+  }
+
+  &__input {
+    width: 100%;
+    min-width: 12rem;
+    color: $red;
+    font-size: 0.9rem;
+    border: 0.15rem solid $green;
+    padding: 0.7rem;
+    height: 2.5rem;
+    border-radius: $border;
+    outline: none;
+    margin: 0.5rem 0.2rem;
+  }
+
+  &__input::placeholder {
+    color: $green;
+    font-weight: bold;
+  }
+
+  &__btn {
+    border: 0.15rem solid $red;
+    padding: 0.5rem;
+    max-width: 50%;
+    margin: 1rem auto;
+    border-radius: $border;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  &__btn:hover {
+    color: $white;
+    border-color: $green;
+    background: $green;
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    color: $green;
+  }
+
+  &__text a {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: $red;
+  }
+
+  &__container {
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+    background: $green;
+    position: relative;
+  }
+
+  &__button {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+}

@@ -1,1 +1,41 @@
 @import "../../constants/styles.scss";
+
+.footer {
+  @include box-measure;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  &__link {
+    padding: 0 1rem 0 1rem;
+    max-width: 100%;
+  }
+
+  &__link a {
+    color: $red;
+    transition: all 0.4s;
+    padding-bottom: 0.2rem;
+    position: relative;
+  }
+
+  &__link a:hover {
+    color: $green;
+  }
+
+  &__link a::after {
+    @include link-style;
+  }
+
+  &__link a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom;
+  }
+
+  &__text {
+    color: $green;
+    max-width: 100%;
+    font-family: "Cookie", cursive;
+    font-size: 1.3rem;
+  }
+}

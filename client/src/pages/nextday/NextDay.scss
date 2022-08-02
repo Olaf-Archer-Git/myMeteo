@@ -1,1 +1,30 @@
 @import "../../constants/styles.scss";
+
+.next {
+  background: rgb(80, 98, 200);
+  background: linear-gradient(
+      10deg,
+      rgba(180, 51, 22, 0.3) 10%,
+      rgba(42, 213, 48, 0.1) 90%
+    ),
+    url("../../assets/bgDaily.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 81vh;
+
+  &__content {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    color: $white;
+    letter-spacing: 0.05rem;
+    padding: 0 1rem;
+  }
+}
+
+.subtitle {
+  font-family: "Cookie", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 1.1rem;
+}
