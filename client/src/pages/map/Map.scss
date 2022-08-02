@@ -1,0 +1,21 @@
+.map {
+  position: relative;
+
+  &__btn {
+    position: absolute;
+    right: 2vh;
+    top: 2vh;
+    z-index: 5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    border: 0.2rem solid rgb(235, 235, 235);
+    background: rgb(96, 140, 175);
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  &__btn:hover {
+    background: rgb(50, 114, 167);
+  }
+}
